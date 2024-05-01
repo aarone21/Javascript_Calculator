@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator using Javascript</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="calculator.js"></script>
+    </head>
+    <body>
+    <div class="container">
+        <div class="calculator">
+            <form>
+                <div class="display">
+                    <input type="text" id="display" name="display">
+                </div>
+                <div>
+                    <input type="button" value="AC" onclick = "display.value = '' " class="operation-button">
+                    <input type="button" value="DE"onclick = "display.value = display.value.toString().slice(0,-1) "class="operation-button">
+                    <input type="button" value="/"onclick = "calculation('/')"class="operation-button">
+                    <input type="button" value="+/-"onclick = "negative()"class="operation-button">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick = "displayValue('7')">
+                    <input type="button" value="8"onclick = "displayValue('8')">
+                    <input type="button" value="9" onclick = "displayValue('9')">
+                    <input type="button" value="*" onclick = "calculation('*')"class="operation-button">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick = "displayValue('4')">
+                    <input type="button" value="5" onclick = "displayValue('5')">
+                    <input type="button" value="6" onclick = "displayValue('6')">
+                    <input type="button" value="-"onclick = "calculation('-')" class="operation-button">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick = "displayValue('1')">
+                    <input type="button" value="2" onclick = "displayValue('2')">
+                    <input type="button" value="3" onclick = "displayValue('3')">
+                    <input type="button" value="+" onclick = "calculation('+')" class="operation-button">
+                </div>
+                <div>
+                    <input type="button" value="0" onclick = "displayValue('0')">
+                    <input type="button" value="." onclick = "displayValue('.')">
+                    <input type="button" value="=" onclick = "calculation()" class="equal">
+                </div>
+            </form>
+        </div>
+    </div>
+    </body>
+</html>
